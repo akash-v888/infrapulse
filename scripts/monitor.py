@@ -3,6 +3,8 @@ import time
 from db import init_db, log_health_check
 from email_alert import send_email
 
+time.sleep(2)
+
 init_db()
 
 # http://13.218.57.145/health
