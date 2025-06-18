@@ -1,5 +1,5 @@
 import sqlite3
-from datetime import datetime
+import datetime
 import os
 
 DB_PATH = os.path.join(os.path.dirname(__file__), 'health_checks.db')
@@ -25,6 +25,6 @@ def log_health_check(status, response_time_ms=None, error_message=None):
     c.execute('''
         INSERT INTO health_logs (timestamp, status, response_time_ms, error_message)
         VALUES (?, ?, ?, ?)
-    ''', (datetime.utcnow().isoformat(), status, response_time_ms, error_message))
+    ''', (datetime.datetime.now(datetime.timezone.utc).isoformat(), status, response_time_ms, error_message))
     conn.commit()
     conn.close()

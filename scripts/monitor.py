@@ -6,7 +6,7 @@ from email_alert import send_email
 init_db()
 
 # http://13.218.57.145/health
-HEALTHCHECK_URL = "http://13.218.57.145/healths"
+HEALTHCHECK_URL = "http://13.218.57.145/health"
 EMAIL_SENDER = "aviswa259@gmail.com"
 EMAIL_RECIPIENT = "aviswa259@gmail.com"
 
