@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), 'health_checks.db')
+DB_PATH = '/home/ec2-user/grafana-data/health_checks.db'
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
